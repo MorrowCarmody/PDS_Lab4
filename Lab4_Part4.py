@@ -7,6 +7,7 @@ moves = 1
 def Tower(n, start, helper, end):
     """Move n disks from the start pin to the end pin."""
     global moves
+    
     if(type(n) != int):
         # non-integer value: print error message
         print('The input must be an integer.')
