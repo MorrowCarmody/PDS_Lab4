@@ -10,8 +10,12 @@ def Tower(n, start, helper, end):
     elif(n < 0):
         # negative value: print error message
         print('The sequence of a negative value is not possible.')
+    elif(n == 0):
+        return
     else:
-        print(f'n: {n}, start: {start}, helper: {helper}, end: {end}.')
+        # HINT: use recursion
+        Tower(n-1, start, end, helper)
+        print(f'Move disk {n} from {start} to {end}.')
         return
 
 Tower(3, 'A', 'B', 'C')
