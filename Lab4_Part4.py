@@ -23,30 +23,4 @@ def Tower(n, start, helper, end):
         Tower(n-1, helper, start, end)
         return
 
-Tower(3, 'A', 'B', 'C')
-
-"""
-> 1 DISK
-Move disk 1 from START to END
-
-> 2 DISKS
-Move disk 1 from START to HELPER
-Move disk 2 from START to END
-Move disk 1 from HELPER to END
-
-> 3 DISKS
-Move disk 1 from START to END
-Move disk 2 from START to HELPER
-Move disk 1 from END to HELPER
-Move disk 3 from START to END
-Move disk 1 from HELPER to START
-Move disk 2 from HELPER to END
-Move disk 1 from START to END
-
-"""
-
-"""
-START   HELPER  END
-START   END     HELPER
-HELPER  START   END
-"""
+Tower(6, 'A', 'B', 'C')
