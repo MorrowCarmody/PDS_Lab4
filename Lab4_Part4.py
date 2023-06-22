@@ -16,10 +16,11 @@ def Tower(n, start, helper, end):
     elif(n == 0):
         return
     else:
-        # HINT: use recursion
+        # Recursive call 1
         Tower(n-1, start, end, helper)
         print(f'{moves}. Move disk {n} from {start} to {end}.')
         moves += 1
+        # Recursive call 2
         Tower(n-1, helper, start, end)
         return
 
