@@ -2,11 +2,8 @@
 # COSC 6375
 # Lab 4 Part 4
 
-moves = 1
-
 def Tower(n, start, helper, end):
     """Move n disks from the start pin to the end pin."""
-    global moves
     
     if(type(n) != int):
         # non-integer value: print error message
@@ -19,8 +16,7 @@ def Tower(n, start, helper, end):
     else:
         # Recursive call 1
         Tower(n-1, start, end, helper)
-        print(f'{moves}. Move disk {n} from {start} to {end}.')
-        moves += 1
+        print(f'Move disk {n} from {start} to {end}.')
         # Recursive call 2
         Tower(n-1, helper, start, end)
         return
