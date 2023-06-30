@@ -4,7 +4,6 @@
 
 def Tower(n, start, helper, end):
     """Move n disks from the start pin to the end pin."""
-    
     if(type(n) != int):
         # non-integer value: print error message
         print('The input must be an integer.')
@@ -14,10 +13,8 @@ def Tower(n, start, helper, end):
     elif(n == 0):
         return
     else:
-        # Recursive call 1
         Tower(n-1, start, end, helper)
         print(f'Move disk {n} from {start} to {end}.')
-        # Recursive call 2
         Tower(n-1, helper, start, end)
         return
 
